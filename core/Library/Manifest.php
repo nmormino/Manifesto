@@ -29,10 +29,6 @@ class Manifest {
         $this->load = $load;
         $this->config = $config;
         
-        $this->paymentModules = [];
-        $this->shippingModules = [];
-        $this->adminNavItems = [];
-        $this->themeShortcodes = [];
         $this->routes = [];
         $this->modules = [];
         $this->classes = [];
@@ -58,10 +54,6 @@ class Manifest {
     }
 
     public function generate() {
-
-        $adminNavItems = [];
-        $paymentModules = [];
-        $shippingModules = [];
 
         foreach($this->config->moduleDirectories as $moduleDirectory)
         {
