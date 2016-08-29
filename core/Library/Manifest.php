@@ -86,12 +86,6 @@ class Manifest {
             }
         }
 
-        foreach($adminNavItems as $adminNavItem)
-        {
-            //re-add them into the structured array
-            $this->addNavMenuItem($adminNavItem);
-        }
-
         $manifest = "<?php ";
         $manifest .= '//ClassMap for autoloader'."\n".'$this->classes = '.var_export($this->classMap, true).';';
         $manifest .= "\n\n".'//Complete Module List'."\n".'$this->modules = '.var_export($this->modules,true).';';
